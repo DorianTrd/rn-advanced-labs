@@ -16,4 +16,47 @@ Structure
 Description :
 Petit composant de Profiles avec nombre d'abonnés ajouté toutes les x secondes. Avec possibilité de s'abonner soi-même et de changer la valeur du bouton
 
+## TP 2
+Composant installé et role: 
+npm install expo-router react-native-safe-area-context react-native-screens => pour optimiser les stacks de navigation et gerer les zones sures
+npx expo install @react-native-async-storage/async-storage  => permet de stocker des données localement sur le téléphone
+
+Structure : 
+<img width="277" height="309" alt="image" src="https://github.com/user-attachments/assets/36cfcaaf-6e52-4533-b53a-d4caf25bdba9" />
+
+
+Table de routes (nom, URL, paramètres).
+```bash
+<Tabs.Screen
+        name="home"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="tp1-profile-card"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+          ),
+        }}
+      />
+      
+      <Tabs.Screen name="detail/[id]" options={{ href: null }} />
+      <Tabs.Screen name="tp1-profile-card/components" options={{ href: null }} />
+      <Tabs.Screen name="tp1-profile-card/components/ProfileCard" options={{ href: null }} />
+    </Tabs>
+      
+```
+
+
+Scénarios de persistance 
+
+Grace a une méthode créer dans Utils , quand on quitte l'application en étant sur detail/1 par exemple et que je relance l'application il me redirige bien directement vers detail/1
+
+https://github.com/user-attachments/assets/b811c0c6-30e1-44a9-ae1f-81ba5a0fedfd
 
