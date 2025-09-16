@@ -52,6 +52,8 @@ Table de routes (nom, URL, paramètres).
     </Tabs>
       
 ```
+<img width="514" height="153" alt="image" src="https://github.com/user-attachments/assets/39a1b1ee-7788-40b3-bda1-6a11df74f7ad" />
+
 
 
 Scénarios de persistance 
