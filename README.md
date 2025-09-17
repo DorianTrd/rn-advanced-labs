@@ -143,14 +143,14 @@ Le store Zustand utilise le middleware `persist` avec **AsyncStorage** pour sauv
 
 Capture d'écran :
 
-<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/8e36c134-e357-4688-b826-3f46a4593790" />
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/9508c05c-97a1-4aa2-aa02-d045f0c20b9e" />
 
-<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/a8408c72-cc6b-4f02-82a5-ede95f5a2cf6" />
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/54323efa-6dde-40f1-aa77-f7d0fb7c0b01" />
 
-<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/56f7850d-f6fb-4f54-9b7e-baa1d259cf63" />
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/175924d8-fdb6-446d-a165-4ee5a6f8aba0" />
 
-<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/396be7d9-31d2-461a-a939-bee3f2c6916f" />
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/c1f4e88f-3f60-4d97-afdc-ba256a8d38fe" />
 
-<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/9a24f026-0cbd-4c40-836e-e9976a7a1864" />
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/ad9a4df3-42df-44b7-9046-4a8c6f680e57" />
 
-<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/d5d0d097-bb46-4118-bf60-882f765e7fe9" />
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/3247c62d-d1db-4a3d-88f1-ad96fd62f689" />
