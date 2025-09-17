@@ -1,4 +1,4 @@
-import { useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { Button, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
@@ -43,6 +43,13 @@ export default function HomeScreen() {
           }
         />
       </View>
+
+      <View style={styles.buttonWrapperWide}>
+        <Link href="/TP3-forms/formik"  style={styles.linkBtn}>Formik</Link>
+      </View>
+      <View style={styles.buttonWrapperWide}>
+        <Link href="/TP3-forms/rhf" style={styles.linkBtn}>RHF</Link>
+      </View>
     </View>
   );
 }
@@ -56,5 +63,17 @@ const styles = StyleSheet.create({
   buttonWrapper: {
     marginVertical: 8, 
     width: 100,      
+  },
+  buttonWrapperWide: {
+    marginVertical: 8,
+    width: 200,
+  },
+  linkBtn: {
+    backgroundColor: "#007AFF",
+    color: "white",
+    textAlign: "center",
+    padding: 12,
+    borderRadius: 8,
+    overflow: "hidden",
   },
 });

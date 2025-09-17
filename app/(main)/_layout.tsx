@@ -1,14 +1,9 @@
-// app/(main)/_layout.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 export default function MainLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: true,
-      }}
-    >
+    <Tabs screenOptions={{ headerShown: true }}>
       <Tabs.Screen
         name="home"
         options={{
@@ -18,6 +13,7 @@ export default function MainLayout() {
           ),
         }}
       />
+
       <Tabs.Screen
         name="tp1-profile-card/index"
         options={{
@@ -27,11 +23,31 @@ export default function MainLayout() {
           ),
         }}
       />
-      
+
+      <Tabs.Screen
+        name="TP3-forms/formik/index"
+        options={{
+          title: "Formik",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="logo-foursquare" color={color} size={size} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="TP3-forms/rhf/index"
+        options={{
+          title: "RHF",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="american-football" color={color} size={size} />
+          ),
+        }}
+      />
+
+
       <Tabs.Screen name="detail/[id]" options={{ href: null }} />
-      <Tabs.Screen name="tp1-profile-card/components" options={{ href: null }} />
-      <Tabs.Screen name="tp1-profile-card/components/ProfileCard" options={{ href: null }} />
       <Tabs.Screen name="detail" options={{ href: null }} />
+      <Tabs.Screen name="tp1-profile-card/components/ProfileCard" options={{ href: null }} />
     </Tabs>
   );
 }
