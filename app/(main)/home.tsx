@@ -50,6 +50,9 @@ export default function HomeScreen() {
       <View style={styles.buttonWrapperWide}>
         <Link href="/TP3-forms/rhf" style={styles.linkBtn}>RHF</Link>
       </View>
+         <View style={styles.buttonWrapperWide}>
+        <Link href="/TP4-robots" style={styles.linkBtn}>Robots</Link>
+      </View>
     </View>
   );
 }

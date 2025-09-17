@@ -43,11 +43,22 @@ export default function MainLayout() {
           ),
         }}
       />
-
+   <Tabs.Screen
+        name="TP4-robots/index"
+        options={{
+          title: "Robots",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="desktop" color={color} size={size} />
+          ),
+        }}
+      />
 
       <Tabs.Screen name="detail/[id]" options={{ href: null }} />
       <Tabs.Screen name="detail" options={{ href: null }} />
       <Tabs.Screen name="tp1-profile-card/components/ProfileCard" options={{ href: null }} />
+   <Tabs.Screen name="TP4-robots/edit/[id]" options={{ href: null }} />
+     <Tabs.Screen name="TP4-robots/create" options={{ href: null }} />
+    
     </Tabs>
   );
 }
