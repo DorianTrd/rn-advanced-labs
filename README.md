@@ -62,3 +62,22 @@ Grace a une méthode créer dans Utils , quand on quitte l'application en étant
 
 https://github.com/user-attachments/assets/b811c0c6-30e1-44a9-ae1f-81ba5a0fedfd
 
+## TP 3
+
+Formik vs RHF
+
+<img width="430" height="176" alt="image" src="https://github.com/user-attachments/assets/56404c66-08b2-4c11-989f-208f0761af01" />
+
+Architecture 
+<img width="329" height="377" alt="image" src="https://github.com/user-attachments/assets/e9022a56-59b4-4517-9c6d-add3119146fc" />
+
+Routes
+
+/formik → Formulaire avec Formik + Yup
+/rhf → Formulaire avec React Hook Form + Zod
+Les écrans sont liés entre eux par des <Link> :
+        Depuis /formik → bouton "Aller à RHF + Zod"
+        Depuis /rhf → bouton "Aller à Formik + Yup"
+
+
+
