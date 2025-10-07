@@ -237,3 +237,122 @@ L'organisation des fichiers respecte les bonnes pratiques de séparation des pr�
 https://github.com/user-attachments/assets/8476e39f-d5ef-4be7-a0f5-78d745b5f6dc
 
 
+# 📸 TP6 – Application Caméra / Galerie
+
+Ce projet est une application mobile développée avec **Expo** et **React Native** qui permet de capturer des photos et des vidéos, de les stocker localement, de les afficher dans une galerie et de les consulter en détail.
+
+---
+
+## 1. Dépendances & Rôles
+
+Le tableau ci-dessous liste les principales bibliothèques utilisées et leur fonction dans l'application :
+
+| Dépendance | Rôle |
+| :--- | :--- |
+| `expo-camera` | Accès à la **caméra** (prise de photo / vidéo). |
+| `expo-file-system` | **Stockage local** des fichiers (photos et vidéos). |
+| `react-native-uuid` | **Génération d’identifiants uniques** pour chaque média. |
+
+---
+
+## 2. Arborescence & Routes
+
+
+### Arborescence des fichiers
+
+<img width="428" height="200" alt="image" src="https://github.com/user-attachments/assets/cc3f85a8-31be-4c93-9bbe-0bca3dddb059" />
+
+
+### Routes principales
+
+
+| Route | Écran | Description |
+| :--- | :--- | :--- |
+| `/TP6-camera` | **Galerie** | Affiche toutes les photos et vidéos. |
+| `/TP6-camera/camera` | **Caméra** | Capture photo ou vidéo. |
+| `/TP6-camera/detail/[id]` | **Détail** | Affiche un média, ses informations et le bouton de suppression. |
+
+
+
+## 3. Gestion des Permissions
+
+### Déclaration (`app.json`)
+
+Pour Android :
+
+```json
+{
+  "expo": {
+    "name": "rn-advanced-labs",
+    "slug": "rn-advanced-labs",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rnadvancedlabs",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.exemple.rnadvancedlabs"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.exemple.rnadvancedlabs",
+      "permissions": ["CAMERA"]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
+
+}
+```
+## 4. Flux Applicatif
+Capture
+L'utilisateur ouvre /TP6-camera/camera, choisit le mode (photo/vidéo) et capture le média.
+
+Sauvegarde
+Photo → expo-file-system via savePhoto().
+
+Vidéo → saveVideo() (format .mp4).
+
+Galerie
+/TP6-camera : La FlatList charge toutes les images/vidéos. Affichage en miniature, tri par date (plus récentes d’abord).
+
+Détail & Suppression
+/TP6-camera/detail/[id] : Affiche le média et ses informations. Le bouton Supprimer déclenche deletePhoto() ou deleteVideo(), puis redirige vers la galerie.
+
+## Capture Video 
+
+
+https://github.com/user-attachments/assets/d7d0f785-0b83-4595-9bc2-1951325f6a4f
+
+
