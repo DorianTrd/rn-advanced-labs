@@ -213,6 +213,27 @@ Logique métier slice (`robotsSlice.ts`):
 
 <img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/051601bc-791d-41cf-911a-cd7b7fc68812" />
 
+## TP5 Stockage Local
 
+
+### 📦 Dépendances & rôle de chaque paquet
+
+| Paquet | Rôle |
+|--------|------|
+| `expo-sqlite` | Création et gestion de la base SQLite locale. |
+| `expo-file-system` | Export et import des données JSON. |
+| `uuid` | Génération d’ID uniques pour les robots. |
+| `formik + yup` ou `react-hook-form + zod` | Validation des formulaires (création / édition). |
+| `@tanstack/react-query` (optionnel) | Gestion de cache et invalidation automatique des requêtes CRUD. |
+
+
+### 🏛️ Architecture des Dossiers
+L'organisation des fichiers respecte les bonnes pratiques de séparation des préoccupations :
+
+<img width="349" height="331" alt="image" src="https://github.com/user-attachments/assets/80cca01c-1921-492c-9624-ee2a6d4ed5af" />
+
+### Démonstration fonctionnement
+
+https://github.com/user-attachments/assets/8476e39f-d5ef-4be7-a0f5-78d745b5f6dc
 
 
