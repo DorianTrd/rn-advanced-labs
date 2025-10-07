@@ -56,6 +56,9 @@ export default function HomeScreen() {
       <View style={styles.buttonWrapperWide}>
         <Link href="/TP4-robots-redux" style={styles.linkBtn}>Robots Redux</Link>
       </View>
+      <View style={styles.buttonWrapperWide}>
+        <Link href="/TP5-robots-db" style={styles.linkBtn}>Robots SQLite</Link>
+      </View>
     </View>
   );
 }
