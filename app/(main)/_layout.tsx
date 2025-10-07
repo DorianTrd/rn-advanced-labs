@@ -63,6 +63,16 @@ export default function MainLayout() {
         }}
       />
 
+      <Tabs.Screen
+        name="TP5-robots-db/index"
+        options={{
+          title: "TP5 Robots SQLite",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="server" color={color} size={size} />
+          ),
+        }}
+      />
+
       <Tabs.Screen name="detail/[id]" options={{ href: null }} />
       <Tabs.Screen name="detail" options={{ href: null }} />
       <Tabs.Screen name="tp1-profile-card/components/ProfileCard" options={{ href: null }} />
@@ -72,6 +82,8 @@ export default function MainLayout() {
       <Tabs.Screen name="TP4-robots-redux/edit/[id]" options={{ href: null }} />
      <Tabs.Screen name="TP4-robots-redux/features/robots/robotsSlice" options={{ href: null }} />
       <Tabs.Screen name="TP4-robots-redux/app/rootReducer" options={{ href: null }} />
+      <Tabs.Screen name="TP5-robots-db/create" options={{ href: null }} />
+      <Tabs.Screen name="TP5-robots-db/edit/[id]" options={{ href: null }} />
     
      </Tabs>
   );
