@@ -154,3 +154,65 @@ Capture d'écran :
 <img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/ad9a4df3-42df-44b7-9046-4a8c6f680e57" />
 
 <img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/3247c62d-d1db-4a3d-88f1-ad96fd62f689" />
+
+
+## TP4B Robots
+
+### Dépendances & rôles
+- @reduxjs/toolkit: configuration store, slice `robots` (reducers synchrones + createAsyncThunk bonus), selectors mémoïsés.
+- react-redux: Provider au niveau de `app/_layout.tsx`, hooks typés `useAppDispatch`/`useAppSelector` (`app/(main)/TP4-robots-redux/app/hooks.ts`).
+- redux-persist: persistance de l’état `robots.items` dans AsyncStorage (config dans `app/(main)/TP4-robots-redux/app/store.ts`).
+
+### Arborescence (extrait) & routes
+```
+app/
+  (main)/
+    _layout.tsx
+    TP4-robots-redux/
+      index.tsx
+      create.tsx
+      edit/[id].tsx
+      components/RobotForm.tsx
+      features/robots/
+        robotsSlice.ts
+        selectors.ts
+      app/
+        store.ts
+        rootReducer.ts
+        hooks.ts
+      validation/robotSchema.ts
+```
+
+Routes Expo Router:
+- `/TP4-robots-redux`
+- `/TP4-robots-redux/create`
+- `/TP4-robots-redux/edit/[id]`
+
+### Règles de validation
+- name: requis, min 2, unique (UI + slice)
+- label: requis, min 3
+- year: entier, [1950, année courante]
+- type: ∈ enum dans `validation/robotSchema.ts`
+
+Logique métier slice (`robotsSlice.ts`):
+- createRobot: refuse si name déjà existant, génère id si absent
+- updateRobot: refuse si name collisionne un autre robot
+- deleteRobot: supprime par id
+
+### Choix de stack formulaire
+- Formik: intégration directe avec Yup, réutilisation d’un composant unique `RobotForm`, UX mobile (KeyboardAvoidingView, navigation entre champs, submit désactivé si invalide).
+
+
+### Captures d’écran 
+
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/e9be312e-d119-437e-91a2-0753ff5b0a00" />
+
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/a9234a11-3ae8-48d1-b01d-c8950ad8c7f3" />
+
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/658c6dc2-a265-4aae-aacd-b4f211fd4ebf" />
+
+<img width="180" height="400" alt="image" src="https://github.com/user-attachments/assets/051601bc-791d-41cf-911a-cd7b7fc68812" />
+
+
+
+
