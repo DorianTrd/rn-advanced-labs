@@ -62,16 +62,29 @@ export default function MainLayout() {
           ),
         }}
       />
-
-      <Tabs.Screen
+            <Tabs.Screen
         name="TP5-robots-db/index"
         options={{
           title: "TP5 Robots SQLite",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="server" color={color} size={size} />
+            <Ionicons name="rocket" color={color} size={size} />
           ),
         }}
       />
+
+
+
+<Tabs.Screen
+        name="TP6-camera/index"
+        options={{
+          title: "TP6 Camera",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="camera" color={color} size={size} />
+          ),
+        }}
+      />
+
+
 
       <Tabs.Screen name="detail/[id]" options={{ href: null }} />
       <Tabs.Screen name="detail" options={{ href: null }} />
@@ -84,7 +97,8 @@ export default function MainLayout() {
       <Tabs.Screen name="TP4-robots-redux/app/rootReducer" options={{ href: null }} />
       <Tabs.Screen name="TP5-robots-db/create" options={{ href: null }} />
       <Tabs.Screen name="TP5-robots-db/edit/[id]" options={{ href: null }} />
-    
+      <Tabs.Screen name="TP6-camera/detail/[id]" options={{ href: null }} />
+      <Tabs.Screen name="TP6-camera/camera" options={{ href: null }} />
      </Tabs>
   );
 }
